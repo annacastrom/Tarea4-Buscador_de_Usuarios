@@ -8,12 +8,16 @@ import Detalle from './pages/Detalle'
 function App() {
   return (
     <BrowserRouter>
-    <Navbar />
-      <Routes>
+    <div className="min-h-screen flex justify-center items-start py-12 px-4">
+      <div className="w-full max-w-xl bg-white rounded-[28px] overflow-hidden border border-stone-300 shadow-2xl">
+        <Navbar />
+        <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/usuarios" element={<Usuarios />}/>
         <Route path="/usuario/:id" element={<Detalle />}/>
       </Routes>
+      </div>
+    </div>
     </BrowserRouter>
   )
 }
